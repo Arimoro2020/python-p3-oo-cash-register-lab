@@ -28,13 +28,13 @@ class CashRegister:
       if self.discount > 0:
           self.total -= last_item_price * self.discount//100
           self.items.pop()
-          if len(self.items) == 0:
+          if not self.items:
               self.total = 0.0
 
       else:
          self.total -= last_item_price
          self.items.pop()
-         if len(self.items) == 0:
+         if not self.items:
             self.total = 0.0
       
      
